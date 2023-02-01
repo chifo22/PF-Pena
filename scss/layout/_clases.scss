@@ -1,0 +1,200 @@
+main {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+
+  section {
+    width: 100%;
+    height: 100%;
+
+    div {
+      h1 {
+        text-align: center;
+        margin: 1rem auto;
+        font-size: 2rem;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  .container-clases {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    @include flex(flex, row, center, start, wrap);
+    padding: 0;
+    gap: .8rem;
+
+    .card {
+      position: relative;
+      width: 20rem;
+      height: 30rem;
+      border-radius: 10px;
+      transition: all .6s ease;
+      box-shadow: 0px 0px 10px 5px rgb(185, 185, 185);
+      margin: 20px;
+
+      h3 {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+        color: white
+      }
+
+
+      img {
+        @extend %imagen;
+        filter: grayscale(2);
+        border-radius: 10px;
+      }
+
+      &:hover img {
+        filter: grayscale(0);
+      }
+
+      p {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+        width: 100%;
+        color: #ffffff;
+        opacity: 0;
+        transition: all .6s ease;
+        padding: .5rem;
+      }
+
+      &:hover p {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.479);
+      }
+    }
+  }
+}
+
+section {
+  width: 100%;
+  height: auto;
+
+  h3 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  .card-container {
+    width: 100%;
+    height: 100%;
+    @include flex(flex, column, space-around, center, nowrap);
+    gap: 2rem;
+    border-radius: 10px;
+    margin: auto;
+
+
+
+
+    .card2 {
+      position: relative;
+      width: 100%;
+      max-width: 50rem;
+      height: 40rem;
+      border-radius: 10px;
+      transition: all .6s ease;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.815);
+
+      border-radius: 10px;
+      filter: blur(2px) grayscale(10);
+
+
+
+      &:hover {
+        filter: blur(0px) grayscale(0);
+        transform: scale(1.05);
+      }
+
+
+
+      img {
+        border-radius: 10px;
+        @extend %imagen;
+      }
+
+      h3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: .5rem auto;
+        color: #ffffff;
+      }
+
+      .logos {
+        position: absolute;
+        width: 100%;
+        object-fit: contain;
+        background-color: #0000006b;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        height: min-content;
+      }
+    }
+  }
+
+  .horarios {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+
+    img {
+      @extend %imagen;
+    }
+
+    h3 {
+      margin: 1rem;
+    }
+  }
+}
+
+
+
+
+/* <main>
+      <section>
+        <div class="container-clases">
+          <h1>ACTIVIDADES</h1>
+          <h2>Las dividimos en tres grupos</h2>
+          <div class="card">
+            <img src="../assets/clases/fuerza.jpg" alt="fuerza" />
+            <h3>Fuerza</h3>
+            <p>
+              
+            </p>
+          </div>
+          <div class="card">
+            <img src="../assets/clases/cardio.jpg" alt="cardio" />
+            <h3>Cardio</h3>
+            <p>
+              
+            </p>
+          </div>
+          <div class="card">
+            <img src="../assets/clases/conexion.jpg" alt="conexion" />
+            <h3>Conexion</h3>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      </section>
+    </main> */

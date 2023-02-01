@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss scss/layout/index.scss css/index.css"
+    "build-css": "node-sass --include-path scss scss/layout/index.scss css/index.css -w"
   },
   "author": "",
   "license": "ISC",

@@ -18,7 +18,7 @@ ul {
   list-style: none;
 }
 
-main section .hero img {
+section .horarios img, section .card-container .card2 img, main .container-clases .card img, main section .hero img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -46,21 +46,37 @@ main section .hero img {
     height: 2px;
   }
 }
-section {
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+header {
   width: 100%;
   height: auto;
 }
-section header {
+header section {
   width: 100%;
   height: 100%;
 }
-section header .nav {
+header section .nav {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  aling-items: center;
+  align-items: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: auto;
@@ -70,7 +86,7 @@ section header .nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  aling-items: center;
+  align-items: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: auto;
@@ -86,7 +102,7 @@ section header .nav {
 }
 .container-logo .logo:hover span {
   color: #fff;
-  text-shadow: 0px 0px 20px black;
+  text-shadow: 0px 0px 20px #000000, 0px 0px 40px #000000, 0px 0px 60px #000000;
   margin: 5px;
 }
 .container-logo .logo span {
@@ -193,16 +209,23 @@ section header .nav {
   </section> */
 main {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 main section {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 main section .hero {
   width: 100%;
   height: 100%;
   position: relative;
+}
+main section .hero img {
+  filter: blur(5px);
+  transition: all 0.3s linear;
+}
+main section .hero img:hover {
+  filter: blur(0);
 }
 main section .hero h1 {
   position: absolute;
@@ -214,7 +237,7 @@ main section .hero h1 {
   font-size: 2rem;
 }
 main section .hero h1:hover {
-  text-shadow: 1px 1px 20px #fff, 1px 1px 40px #fff, 1px 1px 80px #fff;
+  text-shadow: 0px 0px 20px #fff, 0px 0px 40px #fff, 0px 0px 80px #fff;
 }
 main section .hero a {
   position: absolute;
@@ -247,16 +270,20 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  aling-items: center;
+  align-items: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: auto;
+  padding: 0;
+}
+footer .links {
+  padding: 0.5rem;
 }
 footer .links ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  aling-items: center;
+  align-items: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: auto;
@@ -298,23 +325,29 @@ footer .links ul li :hover:nth-child(1)::before {
 footer .links ul li a {
   color: #001449;
 }
+footer .copyright {
+  display: flex;
+  padding: 0.5rem;
+}
+footer .redes {
+  padding: 0.5rem;
+}
+footer .redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .redes ul li {
+  transition: all 0.6s ease;
+}
+footer .redes ul li :hover {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
 
-/* <section>
-    <footer>
-      <div class="links">
-        <ul>
-          <li><a href="">Nosotros</a></li>
-          <li><a href="">Contacto</a></li>
-          <li><a href="">Politica de privacidad</a></li>
-          <li><a href="">Mapa</a></li>
-        </ul>
-      </div>
-
-      <div class="copyright">
-        Copyright &copy; 2023 All Rights Reserved by
-        <a href="./index.html" class="logo"><span>Fitness</span><span>Club</span> </a>
-        </p>
-      </div>
+/* 
 
       <div class="redes">
         <ul>
@@ -328,6 +361,181 @@ footer .links ul li a {
     </footer>
 
   </section> */
+main {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+main section {
+  width: 100%;
+  height: 100%;
+}
+main section div h1 {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 2rem;
+}
+main section div h2 {
+  text-align: center;
+  margin: 1rem auto;
+}
+main .container-clases {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: auto;
+  padding: 0;
+  gap: 0.8rem;
+}
+main .container-clases .card {
+  position: relative;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+  box-shadow: 0px 0px 10px 5px rgb(185, 185, 185);
+  margin: 20px;
+}
+main .container-clases .card h3 {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  color: white;
+}
+main .container-clases .card img {
+  filter: grayscale(2);
+  border-radius: 10px;
+}
+main .container-clases .card:hover img {
+  filter: grayscale(0);
+}
+main .container-clases .card p {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  width: 100%;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 0.6s ease;
+  padding: 0.5rem;
+}
+main .container-clases .card:hover p {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+section {
+  width: 100%;
+  height: auto;
+}
+section h3 {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+section .card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  margin: auto;
+  gap: 2rem;
+  border-radius: 10px;
+  margin: auto;
+}
+section .card-container .card2 {
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  height: 40rem;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.815);
+  border-radius: 10px;
+  filter: blur(2px) grayscale(10);
+}
+section .card-container .card2:hover {
+  filter: blur(0px) grayscale(0);
+  transform: scale(1.05);
+}
+section .card-container .card2 img {
+  border-radius: 10px;
+}
+section .card-container .card2 h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0.5rem auto;
+  color: #ffffff;
+}
+section .card-container .card2 .logos {
+  position: absolute;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.4196078431);
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+section .horarios {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  max-width: 1000px;
+}
+section .horarios h3 {
+  margin: 1rem;
+}
+
+/* <main>
+      <section>
+        <div class="container-clases">
+          <h1>ACTIVIDADES</h1>
+          <h2>Las dividimos en tres grupos</h2>
+          <div class="card">
+            <img src="../assets/clases/fuerza.jpg" alt="fuerza" />
+            <h3>Fuerza</h3>
+            <p>
+
+            </p>
+          </div>
+          <div class="card">
+            <img src="../assets/clases/cardio.jpg" alt="cardio" />
+            <h3>Cardio</h3>
+            <p>
+
+            </p>
+          </div>
+          <div class="card">
+            <img src="../assets/clases/conexion.jpg" alt="conexion" />
+            <h3>Conexion</h3>
+            <p>
+
+            </p>
+          </div>
+        </div>
+      </section>
+    </main> */
 .logo {
   color: #001449;
   font-weight: bold;
@@ -337,7 +545,7 @@ footer .links ul li a {
 }
 .logo:hover span {
   color: #fff;
-  text-shadow: 0px 0px 20px black;
+  text-shadow: 0px 0px 20px #000000, 0px 0px 40px #000000, 0px 0px 60px #000000;
   margin: 5px;
 }
 .logo span {
