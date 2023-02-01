@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main section .hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes underline {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 100%;
+    height: 2px;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 100%;
+    height: 2px;
+  }
+}
+section {
+  width: 100%;
+  height: auto;
+}
+section header {
+  width: 100%;
+  height: 100%;
+}
+section header .nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  aling-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  margin: auto;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  aling-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  margin: auto;
+  padding: 0;
+  margin: 0;
+}
+.container-logo .logo {
+  color: #001449;
+  font-weight: bold;
+}
+.container-logo .logo :nth-child(2) {
+  color: #6bc2ff;
+}
+.container-logo .logo:hover span {
+  color: #fff;
+  text-shadow: 0px 0px 20px black;
+  margin: 5px;
+}
+.container-logo .logo span {
+  transition: all 0.8s ease;
+}
+
+.enlaces-nav {
+  display: flex;
+  gap: 5px;
+}
+.enlaces-nav :nth-child(1) {
+  color: #001449;
+  position: relative;
+}
+.enlaces-nav :nth-child(2) {
+  color: #001449;
+  position: relative;
+}
+.enlaces-nav :nth-child(3) {
+  color: #001449;
+  position: relative;
+}
+.enlaces-nav :nth-child(4) {
+  color: #001449;
+  position: relative;
+}
+.enlaces-nav :hover:nth-child(1)::after {
+  color: #00b4fc;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6bc2ff;
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.enlaces-nav :hover:nth-child(2)::after {
+  color: #00b4fc;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6bc2ff;
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.enlaces-nav :hover:nth-child(3)::after {
+  color: #00b4fc;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6bc2ff;
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.enlaces-nav :hover:nth-child(4)::after {
+  color: #00b4fc;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6bc2ff;
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.enlaces-nav a {
+  transition: all 0.3s ease;
+}
+
+/* section
+    header
+      nav class="nav">
+        <div class="container-logo">
+          <a href="./index.html" class="logo"> <span>Fitness</span>
+            <span href="./index.html">Club</span>
+          </a>
+        </div>
+
+        <div class="enlaces-nav">
+          <a href="#">Inicio</a>
+          <a href="#">Clases</a>
+          <a href="#">Horario</a>
+          <a href="#">Info</a>
+        </div>
+      </nav>
+    </header>
+  </section> */
+main {
+  width: 100%;
+  height: 100vh;
+}
+main section {
+  width: 100%;
+  height: 100%;
+}
+main section .hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main section .hero h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  text-shadow: 1px 1px 20px #fff;
+  font-size: 2rem;
+}
+main section .hero h1:hover {
+  text-shadow: 1px 1px 20px #fff, 1px 1px 40px #fff, 1px 1px 80px #fff;
+}
+main section .hero a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #eee;
+  transform: translate(-50%, -50%);
+  border: 1px solid #eee;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+main section .hero a:hover {
+  text-shadow: 0px 0px 20px #17f9ff, 0px 0px 40px #17f9ff, 0px 0px 60px #17f9ff;
+  border: 1px solid #17f9ff;
+}
+
+/* <main>
+    <section>
+      <div class="hero">
+        <img src="./assets/hero.jpg" alt="gimnasio">
+        <h1>Que estas esperando?</h1>
+        <a href="./sass/pages/clases.html">Ver mas</a>
+      </div>
+    </section>
+  </main> */
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  aling-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  margin: auto;
+}
+footer .links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aling-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  margin: auto;
+  padding: 0;
+  gap: 0.5rem;
+}
+footer .links ul li {
+  position: relative;
+  text-align: center;
+}
+footer .links ul li :hover:nth-child(1)::after {
+  color: #00b4fc;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(107, 194, 255) 0%, rgba(199, 232, 255, 0.2693452381) 49%, rgb(107, 194, 255) 100%);
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+footer .links ul li :hover:nth-child(1)::before {
+  color: #00b4fc;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(107, 194, 255) 0%, rgba(199, 232, 255, 0.2693452381) 49%, rgb(107, 194, 255) 100%);
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+footer .links ul li a {
+  color: #001449;
+}
+
+/* <section>
+    <footer>
+      <div class="links">
+        <ul>
+          <li><a href="">Nosotros</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Politica de privacidad</a></li>
+          <li><a href="">Mapa</a></li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        Copyright &copy; 2023 All Rights Reserved by
+        <a href="./index.html" class="logo"><span>Fitness</span><span>Club</span> </a>
+        </p>
+      </div>
+
+      <div class="redes">
+        <ul>
+          <li><a class="facebook" href=""><img src="./assets/facebook.svg" alt="facebook"></a></li>
+          <li><a class="twitter" href="#"><img src="./assets/twitter.svg" alt=""></a></li>
+          <li><a class="instagram" href="#"><img src="./assets/instagram.svg"alt=""></a></li>
+          <li><a class="whatsapp" href="#"><img src="./assets/whatsapp.svg"alt=""></a></li>
+        </ul>
+      </div>
+
+    </footer>
+
+  </section> */
+.logo {
+  color: #001449;
+  font-weight: bold;
+}
+.logo :nth-child(2) {
+  color: #6bc2ff;
+}
+.logo:hover span {
+  color: #fff;
+  text-shadow: 0px 0px 20px black;
+  margin: 5px;
+}
+.logo span {
+  transition: all 0.8s ease;
+}

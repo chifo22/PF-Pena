@@ -1,0 +1,82 @@
+footer {
+  width: 100%;
+  height: auto;
+  @include flex(flex, row, space-between, center, nowrap);
+
+  .links {
+    ul {
+      @include flex(flex, column, space-between, center, nowrap);
+      padding: 0;
+      gap: .5rem;
+
+      li {
+        position: relative;
+        text-align: center;
+
+        :hover:nth-child(1)::after {
+          color: $color4;
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, rgba(107, 194, 255, 1) 0%, rgba(199, 232, 255, 0.26934523809523814) 49%, rgba(107, 194, 255, 1) 100%);
+          animation-name: underline;
+          animation-duration: .5s;
+        }
+
+        :hover:nth-child(1)::before {
+          color: $color4;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 2px;
+
+          background: linear-gradient(90deg, rgba(107, 194, 255, 1) 0%, rgba(199, 232, 255, 0.26934523809523814) 49%, rgba(107, 194, 255, 1) 100%);
+          animation-name: underline;
+          animation-duration: .5s;
+        }
+
+        a {
+          color: $color1;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+/* <section>
+    <footer>
+      <div class="links">
+        <ul>
+          <li><a href="">Nosotros</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Politica de privacidad</a></li>
+          <li><a href="">Mapa</a></li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        Copyright &copy; 2023 All Rights Reserved by
+        <a href="./index.html" class="logo"><span>Fitness</span><span>Club</span> </a>
+        </p>
+      </div>
+
+      <div class="redes">
+        <ul>
+          <li><a class="facebook" href=""><img src="./assets/facebook.svg" alt="facebook"></a></li>
+          <li><a class="twitter" href="#"><img src="./assets/twitter.svg" alt=""></a></li>
+          <li><a class="instagram" href="#"><img src="./assets/instagram.svg"alt=""></a></li>
+          <li><a class="whatsapp" href="#"><img src="./assets/whatsapp.svg"alt=""></a></li>
+        </ul>
+      </div>
+
+    </footer>
+
+  </section> */

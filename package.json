@@ -1,0 +1,26 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/layout/index.scss css/index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.3",
+    "node": "^18.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chifo22/Scss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chifo22/Scss/issues"
+  },
+  "homepage": "https://github.com/chifo22/Scss#readme",
+  "description": ""
+}

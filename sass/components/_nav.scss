@@ -1,0 +1,147 @@
+section {
+  width: 100%;
+  height: auto;
+
+  header {
+    width: 100%;
+    height: 100%;
+
+    .nav {
+      width: 100%;
+      height: 100%;
+      @include flex(flex, row, space-between, center, nowrap);
+
+    }
+  }
+}
+
+.container-logo {
+  @include flex(flex, row, center, center, nowrap);
+  padding: 0;
+  margin: 0;
+
+  .logo {
+    color: $color1;
+    font-weight: bold;
+
+    :nth-child(2) {
+      color: #6bc2ff;
+    }
+
+    &:hover span {
+      color: #fff;
+      text-shadow: 0px 0px 20px black;
+      margin: 5px;
+    }
+
+    span {
+      transition: all .8s ease;
+    }
+  }
+}
+
+.enlaces-nav {
+  display: flex;
+  gap: 5px;
+
+  :nth-child(1) {
+    color: $color1;
+    position: relative;
+  }
+
+  :nth-child(2) {
+    color: $color1;
+    position: relative;
+  }
+
+  :nth-child(3) {
+    color: $color1;
+    position: relative;
+  }
+
+  :nth-child(4) {
+    color: $color1;
+    position: relative;
+  }
+
+  :hover:nth-child(1)::after {
+    color: $color4;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6bc2ff;
+    animation-name: underline;
+    animation-duration: .5s;
+  }
+
+  :hover:nth-child(2)::after {
+    color: $color4;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6bc2ff;
+    animation-name: underline;
+    animation-duration: .5s;
+  }
+
+  :hover:nth-child(3)::after {
+    color: $color4;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6bc2ff;
+    animation-name: underline;
+    animation-duration: .5s;
+  }
+
+  :hover:nth-child(4)::after {
+    color: $color4;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6bc2ff;
+    animation-name: underline;
+    animation-duration: .5s;
+  }
+
+  a {
+    transition: all .3s ease;
+  }
+}
+
+
+
+
+
+
+
+/* section
+    header
+      nav class="nav">
+        <div class="container-logo">
+          <a href="./index.html" class="logo"> <span>Fitness</span>
+            <span href="./index.html">Club</span>
+          </a>
+        </div>
+        
+        <div class="enlaces-nav">
+          <a href="#">Inicio</a>
+          <a href="#">Clases</a>
+          <a href="#">Horario</a>
+          <a href="#">Info</a>
+        </div>
+      </nav>
+    </header>
+  </section> */
