@@ -48,13 +48,18 @@ footer {
           transition: all 5s ease;
 
           a {
-            padding: 5px;
-            transition: all 5s ease
+            transition: all 5s ease;
+
+            img {
+
+              width: 2rem;
+            }
           }
 
           :hover {
             animation-name: rotate;
             animation-duration: 1s;
+
           }
 
           &:hover:nth-child(1):before {
@@ -62,27 +67,25 @@ footer {
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(23, 124, 255, 0.3) 0%, rgba(0, 19, 73, .3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s;
           }
 
           &:hover:nth-child(2):before {
-            content: "Twiter";
+            content: "Twitter";
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(23, 249, 255, .3) 0%, rgba(0, 19, 73, .3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s;
           }
@@ -92,27 +95,25 @@ footer {
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(255, 23, 197, 0.5) 0%, rgba(73, 0, 0, 0.3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s;
           }
 
           &:hover:nth-child(4):before {
-            content: "Whatsapp";
+            content: "WhatsApp";
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(50, 255, 23, .3) 0%, rgba(0, 19, 73, .3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s;
           }

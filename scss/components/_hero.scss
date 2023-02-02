@@ -6,12 +6,17 @@
   section {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+
 
 
     .hero {
       width: 100%;
       height: 100vh;
       position: relative;
+      animation-name: scale;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
 
 
       img {
@@ -25,6 +30,7 @@
       }
 
       h1 {
+
         position: absolute;
         top: 30%;
         left: 50%;

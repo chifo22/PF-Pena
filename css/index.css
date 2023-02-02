@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 * {
   padding: 0;
@@ -38,11 +39,17 @@ ul {
 
 @keyframes link-footer {
   0% {
-    width: 0;
-    height: 90%; }
+    left: 0; }
   100% {
-    width: 300%;
-    height: 90%; } }
+    left: -150%; } }
+
+@keyframes scale {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1); } }
 
 header {
   width: 100%;
@@ -168,11 +175,15 @@ header {
   margin: 0; }
   .main-hero section {
     width: 100%;
-    height: 100vh; }
+    height: 100vh;
+    overflow: hidden; }
     .main-hero section .hero {
       width: 100%;
       height: 100vh;
-      position: relative; }
+      position: relative;
+      animation-name: scale;
+      animation-duration: 6s;
+      animation-iteration-count: infinite; }
       .main-hero section .hero img {
         filter: blur(5px);
         transition: all .3s linear; }
@@ -249,8 +260,9 @@ footer {
           position: relative;
           transition: all 5s ease; }
           footer section .redes ul li a {
-            padding: 5px;
             transition: all 5s ease; }
+            footer section .redes ul li a img {
+              width: 2rem; }
           footer section .redes ul li :hover {
             animation-name: rotate;
             animation-duration: 1s; }
@@ -259,25 +271,23 @@ footer {
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(23, 124, 255, 0.3) 0%, rgba(0, 19, 73, 0.3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s; }
           footer section .redes ul li:hover:nth-child(2):before {
-            content: "Twiter";
+            content: "Twitter";
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(23, 249, 255, 0.3) 0%, rgba(0, 19, 73, 0.3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s; }
           footer section .redes ul li:hover:nth-child(3):before {
@@ -285,27 +295,99 @@ footer {
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(255, 23, 197, 0.5) 0%, rgba(73, 0, 0, 0.3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s; }
           footer section .redes ul li:hover:nth-child(4):before {
-            content: "Whatsapp";
+            content: "WhatsApp";
             position: absolute;
             color: #fff;
             background: linear-gradient(rgba(50, 255, 23, 0.3) 0%, rgba(0, 19, 73, 0.3) 100%);
-            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: -150%;
             padding: 5px;
-            border-radius: 10px;
-            left: -350%;
-            width: 300%;
-            height: 90%;
+            border-radius: 5px;
             animation: link-footer;
             animation-duration: .5s; }
+
+main {
+  position: relative; }
+  main .botón-flotante {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 80%;
+    left: 5%;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
+    main .botón-flotante a {
+      border-radius: 50%;
+      position: relative; }
+      main .botón-flotante a img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5); }
+      main .botón-flotante a::after {
+        transition: all .5s linear;
+        position: absolute;
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        bottom: -100%;
+        border-radius: 50%;
+        background: linear-gradient(to left, rgba(0, 108, 112, 0.9) 0%, rgba(0, 19, 73, 0.6) 100%); }
+      main .botón-flotante a:hover::after {
+        bottom: 4px;
+        left: 0;
+        animation-name: rotate;
+        animation-duration: 2s; }
+
+main .botón-flotante {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: fixed;
+  top: 80%;
+  left: 5%;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all .6s ease-in-out;
+  animation-name: border;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; }
+  main .botón-flotante a {
+    border-radius: 50%;
+    position: relative; }
+    main .botón-flotante a img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5); }
+    main .botón-flotante a::after {
+      transition: all .5s linear;
+      position: absolute;
+      content: "";
+      width: 2.5rem;
+      height: 2.5rem;
+      bottom: -100%;
+      border-radius: 50%;
+      background: linear-gradient(to left, rgba(0, 108, 112, 0.9) 0%, rgba(0, 19, 73, 0.6) 100%); }
+    main .botón-flotante a:hover::after {
+      bottom: 4px;
+      left: 0;
+      animation-name: rotate;
+      animation-duration: 2s; }
 
 main {
   width: 100%;
@@ -341,7 +423,8 @@ main {
       border-radius: 10px;
       transition: all .6s ease;
       box-shadow: 0px 0px 10px 5px #b9b9b9;
-      margin: 20px; }
+      margin: 20px;
+      overflow: hidden; }
       main .container-clases .card h3 {
         font-size: 1.5rem;
         text-align: center;
@@ -359,18 +442,17 @@ main {
         filter: grayscale(0); }
       main .container-clases .card p {
         position: absolute;
-        bottom: 10%;
+        bottom: 100%;
         left: 50%;
         transform: translate(-50%);
         z-index: 1;
         width: 100%;
         color: #ffffff;
-        opacity: 0;
         transition: all .6s ease;
         padding: .5rem; }
       main .container-clases .card:hover p {
-        opacity: 1;
-        background-color: rgba(0, 0, 0, 0.479); }
+        background-color: rgba(0, 0, 0, 0.479);
+        bottom: 10%; }
 
 section {
   width: 100%;
@@ -395,17 +477,22 @@ section {
     section .card-container .card2 {
       position: relative;
       width: 100%;
-      max-width: 50rem;
-      height: 40rem;
+      max-width: 40rem;
+      height: 30rem;
       border-radius: 10px;
       transition: all .6s ease;
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.815);
       border-radius: 10px;
-      filter: blur(2px) grayscale(10); }
-      section .card-container .card2:hover {
+      overflow: hidden; }
+      section .card-container .card2:hover img {
         filter: blur(0px) grayscale(0); }
+      section .card-container .card2:hover .logos {
+        bottom: 10%;
+        left: 50%; }
       section .card-container .card2 img {
-        border-radius: 10px; }
+        border-radius: 10px;
+        filter: blur(2px) grayscale(10);
+        transition: all .6s ease; }
       section .card-container .card2 h3 {
         position: absolute;
         bottom: 0;
@@ -417,7 +504,7 @@ section {
         width: 100%;
         object-fit: contain;
         background-color: #0000006b;
-        bottom: 10%;
+        bottom: -100%;
         left: 50%;
         transform: translate(-50%);
         height: min-content; }
@@ -489,8 +576,6 @@ section {
           font-weight: bold;
           padding: 1rem;
           width: 100%; }
-        .main-card-nosotros section .card-nosotros .text-card :first-child {
-          color: #444444; }
 
 main {
   width: 100%;
@@ -582,17 +667,18 @@ main {
       grid-template-columns: auto;
       grid-template-rows: auto;
       box-shadow: 0px 0px 10px 5px #5e5d5d;
-      position: relative; }
-      .main-card-nosotros section .card-nosotros :hover img {
-        filter: blur(2px); }
+      position: relative;
+      overflow: hidden; }
+      .main-card-nosotros section .card-nosotros:hover .text-card {
+        transition: all .6s linear;
+        right: 0;
+        top: 0; }
       .main-card-nosotros section .card-nosotros .text-card {
+        align-self: center;
         position: absolute;
-        align-self: center; }
+        top: 100%;
+        right: 0%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.479); }
         .main-card-nosotros section .card-nosotros .text-card p {
-          font-weight: bold;
-          opacity: 0; }
-      .main-card-nosotros section .card-nosotros:hover p {
-        animation-name: rotate;
-        animation-duration: 2s;
-        background-color: rgba(255, 255, 255, 0.6);
-        opacity: 1; } }
+          font-weight: bold; } }

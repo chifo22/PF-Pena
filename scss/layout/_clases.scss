@@ -38,6 +38,7 @@ main {
       transition: all .6s ease;
       box-shadow: 0px 0px 10px 5px rgb(185, 185, 185);
       margin: 20px;
+      overflow: hidden;
 
       h3 {
         font-size: 1.5rem;
@@ -64,20 +65,20 @@ main {
 
       p {
         position: absolute;
-        bottom: 10%;
+        bottom: 100%;
         left: 50%;
         transform: translate(-50%);
         z-index: 1;
         width: 100%;
         color: #ffffff;
-        opacity: 0;
+
         transition: all .6s ease;
         padding: .5rem;
       }
 
       &:hover p {
-        opacity: 1;
         background-color: rgba(0, 0, 0, 0.479);
+        bottom: 10%;
       }
     }
   }
@@ -104,28 +105,41 @@ section {
 
 
 
+
     .card2 {
       position: relative;
       width: 100%;
-      max-width: 50rem;
-      height: 40rem;
+      max-width: 40rem;
+      height: 30rem;
       border-radius: 10px;
       transition: all .6s ease;
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.815);
       border-radius: 10px;
-      filter: blur(2px) grayscale(10);
+      overflow: hidden;
 
-
-
-      &:hover {
+      &:hover img {
         filter: blur(0px) grayscale(0);
       }
+
+      &:hover .logos {
+        bottom: 10%;
+        left: 50%;
+      }
+
+
+
+
+
 
 
 
       img {
         border-radius: 10px;
         @extend %imagen;
+        filter: blur(2px) grayscale(10);
+        transition: all .6s ease;
+
+
       }
 
       h3 {
@@ -141,7 +155,7 @@ section {
         width: 100%;
         object-fit: contain;
         background-color: #0000006b;
-        bottom: 10%;
+        bottom: -100%;
         left: 50%;
         transform: translate(-50%);
         height: min-content;

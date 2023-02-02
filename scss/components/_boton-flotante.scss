@@ -1,0 +1,113 @@
+main {
+  position: relative;
+
+  .botón-flotante {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 80%;
+    left: 5%;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+
+    a {
+      border-radius: 50%;
+      position: relative;
+
+
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+
+      }
+
+      &::after {
+        transition: all .5s linear;
+        position: absolute;
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        bottom: -100%;
+        border-radius: 50%;
+        background: linear-gradient(to left, rgba(0, 108, 112, 0.9) 0%, rgba(0, 19, 73, .6) 100%);
+
+      }
+
+      &:hover::after {
+        bottom: 4px;
+        left: 0;
+        animation-name: rotate;
+        animation-duration: 2s;
+
+      }
+    }
+
+
+  }
+}
+
+main {
+  .botón-flotante {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 80%;
+    left: 5%;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    animation-name: border;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+
+    a {
+      border-radius: 50%;
+      position: relative;
+
+
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+
+      }
+
+      &::after {
+        transition: all .5s linear;
+        position: absolute;
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        bottom: -100%;
+        border-radius: 50%;
+        background: linear-gradient(to left, rgba(0, 108, 112, 0.9) 0%, rgba(0, 19, 73, .6) 100%);
+
+      }
+
+      &:hover::after {
+        bottom: 4px;
+        left: 0;
+        animation-name: rotate;
+        animation-duration: 2s;
+
+      }
+    }
+
+
+  }
+}
