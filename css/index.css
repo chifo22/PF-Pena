@@ -18,7 +18,7 @@ ul {
   list-style: none;
 }
 
-section .horarios img, section .card-container .card2 img, main .container-clases .card img, .main-hero section .hero img {
+.main-card-nosotros section .card-nosotros img, section .horarios img, section .card-container .card2 img, main .container-clases .card img, .main-hero section .hero img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -85,7 +85,7 @@ section .horarios img, section .card-container .card2 img, main .container-clase
 header {
   width: 100%;
   height: auto;
-  background: linear-gradient(rgba(23, 249, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
+  background: linear-gradient(to left, rgb(0, 108, 112) 0%, rgba(0, 19, 73, 0.8) 100%);
 }
 header section {
   width: 100%;
@@ -294,7 +294,7 @@ footer {
   padding: 1rem;
   margin: auto;
   padding: 0;
-  background: linear-gradient(rgba(23, 249, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
+  background: linear-gradient(to left, rgb(0, 108, 112) 0%, rgba(0, 19, 73, 0.8) 100%);
 }
 footer .copyright {
   display: flex;
@@ -593,3 +593,80 @@ section .horarios h3 {
         </div>
       </section>
     </main> */
+.main-card-nosotros {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-card-nosotros h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+.main-card-nosotros section {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.596);
+}
+.main-card-nosotros section .card-nosotros {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr;
+}
+.main-card-nosotros section .card-nosotros .text-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-card-nosotros section .card-nosotros .text-card h2 {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 30px rgb(255, 255, 255), 0px 0px 50px rgb(255, 255, 255);
+}
+.main-card-nosotros section .card-nosotros .text-card p {
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+}
+.main-card-nosotros section .card-nosotros .text-card :first-child {
+  color: rgb(68, 68, 68);
+}
+
+@media only screen and (max-width: 768px) {
+  .main-card-nosotros section {
+    background-color: rgba(255, 255, 255, 0.596);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 45rem 45rem 45rem;
+    gap: 1rem;
+  }
+  .main-card-nosotros section .card-nosotros {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    box-shadow: 0px 0px 10px 5px rgb(94, 93, 93);
+    position: relative;
+  }
+  .main-card-nosotros section .card-nosotros :hover img {
+    filter: blur(2px);
+  }
+  .main-card-nosotros section .card-nosotros .text-card {
+    position: absolute;
+    align-self: center;
+  }
+  .main-card-nosotros section .card-nosotros .text-card p {
+    font-weight: bold;
+    opacity: 0;
+  }
+  .main-card-nosotros section .card-nosotros:hover p {
+    -webkit-animation-name: rotate;
+            animation-name: rotate;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
+}
