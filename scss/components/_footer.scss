@@ -1,58 +1,36 @@
 footer {
   width: 100%;
   height: auto;
-  @include flex(flex, row, space-between, center, nowrap);
+  @include flex(flex, row, space-around, center, nowrap);
   padding: 0;
+  background: linear-gradient(rgba(23, 249, 255, .8) 0%, rgb(0, 19, 73) 100%);
 
-  .links {
-    padding: .5rem;
-
-    ul {
-      @include flex(flex, column, space-between, center, nowrap);
-      padding: 0;
-      gap: .5rem;
-
-
-      li {
-        position: relative;
-        text-align: center;
-
-        :hover:nth-child(1)::after {
-          color: $color4;
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(90deg, rgba(107, 194, 255, 1) 0%, rgba(199, 232, 255, 0.26934523809523814) 49%, rgba(107, 194, 255, 1) 100%);
-          animation-name: underline;
-          animation-duration: .5s;
-        }
-
-        :hover:nth-child(1)::before {
-          color: $color4;
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(90deg, rgba(107, 194, 255, 1) 0%, rgba(199, 232, 255, 0.26934523809523814) 49%, rgba(107, 194, 255, 1) 100%);
-          animation-name: underline;
-          animation-duration: .5s;
-        }
-
-        a {
-          color: $color1;
-        }
-      }
-    }
-  }
 
   .copyright {
     display: flex;
     padding: .5rem;
+    color: #fff;
+
+    .logo {
+      color: $color1;
+      font-weight: bold;
+
+      :nth-child(2) {
+        color: #6bc2ff;
+      }
+
+      &:hover span {
+        color: #fff;
+        text-shadow: 0px 0px 20px #000000,
+          -15px -15px 40px #000000,
+          -15px -15px 60px #000000;
+        margin: 3px;
+      }
+
+      span {
+        transition: all .8s ease;
+      }
+    }
   }
 
   .redes {
@@ -64,22 +42,84 @@ footer {
       gap: .5rem;
 
       li {
-        transition: all .6s ease;
+        position: relative;
+        transition: all 5s ease;
+
+        a {
+          padding: 5px;
+          transition: all 5s ease
+        }
 
         :hover {
           animation-name: rotate;
           animation-duration: 1s;
         }
+
+        &:hover:nth-child(1):before {
+          content: "Facebook";
+          position: absolute;
+          color: #fff;
+          background: linear-gradient(rgba(23, 124, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
+          top: 0;
+          padding: 5px;
+          border-radius: 10px;
+          left: -350%;
+          width: 300%;
+          height: 90%;
+          animation: link-footer;
+          animation-duration: .5s;
+        }
+
+        &:hover:nth-child(2):before {
+          content: "Twiter";
+          position: absolute;
+          color: #fff;
+          background: linear-gradient(rgba(23, 249, 255, .8) 0%, rgb(0, 19, 73) 100%);
+          top: 0;
+          padding: 5px;
+          border-radius: 10px;
+          left: -350%;
+          width: 300%;
+          height: 90%;
+          animation: link-footer;
+          animation-duration: .5s;
+        }
+
+        &:hover:nth-child(3):before {
+          content: "Instagram";
+          position: absolute;
+          color: #fff;
+          background: linear-gradient(rgba(255, 96, 23, 0.877) 0%, rgb(0, 19, 73) 100%);
+          top: 0;
+          padding: 5px;
+          border-radius: 10px;
+          left: -350%;
+          width: 300%;
+          height: 90%;
+          animation: link-footer;
+          animation-duration: .5s;
+        }
+
+        &:hover:nth-child(4):before {
+          content: "Whatsapp";
+          position: absolute;
+          color: #fff;
+          background: linear-gradient(rgba(50, 255, 23, 0.8) 0%, rgb(0, 19, 73) 100%);
+          top: 0;
+          padding: 5px;
+          border-radius: 10px;
+          left: -350%;
+          width: 300%;
+          height: 90%;
+          animation: link-footer;
+          animation-duration: .5s;
+        }
+
       }
 
     }
   }
 }
-
-
-
-
-
 
 
 /* 

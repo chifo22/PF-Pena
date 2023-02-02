@@ -31,7 +31,7 @@ section .horarios img, section .card-container .card2 img, main .container-clase
     height: 0;
   }
   100% {
-    width: 100%;
+    width: 300%;
     height: 2px;
   }
 }
@@ -42,7 +42,7 @@ section .horarios img, section .card-container .card2 img, main .container-clase
     height: 0;
   }
   100% {
-    width: 100%;
+    width: 300%;
     height: 2px;
   }
 }
@@ -62,9 +62,30 @@ section .horarios img, section .card-container .card2 img, main .container-clase
     transform: rotateY(360deg);
   }
 }
+@-webkit-keyframes link-footer {
+  0% {
+    width: 0;
+    height: 90%;
+  }
+  100% {
+    width: 300%;
+    height: 90%;
+  }
+}
+@keyframes link-footer {
+  0% {
+    width: 0;
+    height: 90%;
+  }
+  100% {
+    width: 300%;
+    height: 90%;
+  }
+}
 header {
   width: 100%;
   height: auto;
+  background: linear-gradient(rgba(23, 249, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
 }
 header section {
   width: 100%;
@@ -114,19 +135,15 @@ header section .nav {
   gap: 5px;
 }
 .enlaces-nav :nth-child(1) {
-  color: #001449;
   position: relative;
 }
 .enlaces-nav :nth-child(2) {
-  color: #001449;
   position: relative;
 }
 .enlaces-nav :nth-child(3) {
-  color: #001449;
   position: relative;
 }
 .enlaces-nav :nth-child(4) {
-  color: #001449;
   position: relative;
 }
 .enlaces-nav :hover:nth-child(1)::after {
@@ -187,6 +204,7 @@ header section .nav {
 }
 .enlaces-nav a {
   transition: all 0.3s ease;
+  color: #fff;
 }
 
 /* section
@@ -217,7 +235,7 @@ main section {
 }
 main section .hero {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 main section .hero img {
@@ -269,65 +287,33 @@ footer {
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: auto;
   padding: 0;
-}
-footer .links {
-  padding: 0.5rem;
-}
-footer .links ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-  margin: auto;
-  padding: 0;
-  gap: 0.5rem;
-}
-footer .links ul li {
-  position: relative;
-  text-align: center;
-}
-footer .links ul li :hover:nth-child(1)::after {
-  color: #00b4fc;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, rgb(107, 194, 255) 0%, rgba(199, 232, 255, 0.2693452381) 49%, rgb(107, 194, 255) 100%);
-  -webkit-animation-name: underline;
-          animation-name: underline;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-footer .links ul li :hover:nth-child(1)::before {
-  color: #00b4fc;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, rgb(107, 194, 255) 0%, rgba(199, 232, 255, 0.2693452381) 49%, rgb(107, 194, 255) 100%);
-  -webkit-animation-name: underline;
-          animation-name: underline;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-footer .links ul li a {
-  color: #001449;
+  background: linear-gradient(rgba(23, 249, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
 }
 footer .copyright {
   display: flex;
   padding: 0.5rem;
+  color: #fff;
+}
+footer .copyright .logo {
+  color: #001449;
+  font-weight: bold;
+}
+footer .copyright .logo :nth-child(2) {
+  color: #6bc2ff;
+}
+footer .copyright .logo:hover span {
+  color: #fff;
+  text-shadow: 0px 0px 20px #000000, -15px -15px 40px #000000, -15px -15px 60px #000000;
+  margin: 3px;
+}
+footer .copyright .logo span {
+  transition: all 0.8s ease;
 }
 footer .redes {
   padding: 0.5rem;
@@ -338,13 +324,82 @@ footer .redes ul {
   gap: 0.5rem;
 }
 footer .redes ul li {
-  transition: all 0.6s ease;
+  position: relative;
+  transition: all 5s ease;
+}
+footer .redes ul li a {
+  padding: 5px;
+  transition: all 5s ease;
 }
 footer .redes ul li :hover {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+footer .redes ul li:hover:nth-child(1):before {
+  content: "Facebook";
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(rgba(23, 124, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
+  top: 0;
+  padding: 5px;
+  border-radius: 10px;
+  left: -350%;
+  width: 300%;
+  height: 90%;
+  -webkit-animation: link-footer;
+          animation: link-footer;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+footer .redes ul li:hover:nth-child(2):before {
+  content: "Twiter";
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(rgba(23, 249, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
+  top: 0;
+  padding: 5px;
+  border-radius: 10px;
+  left: -350%;
+  width: 300%;
+  height: 90%;
+  -webkit-animation: link-footer;
+          animation: link-footer;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+footer .redes ul li:hover:nth-child(3):before {
+  content: "Instagram";
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(rgba(255, 96, 23, 0.877) 0%, rgb(0, 19, 73) 100%);
+  top: 0;
+  padding: 5px;
+  border-radius: 10px;
+  left: -350%;
+  width: 300%;
+  height: 90%;
+  -webkit-animation: link-footer;
+          animation: link-footer;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+footer .redes ul li:hover:nth-child(4):before {
+  content: "Whatsapp";
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(rgba(50, 255, 23, 0.8) 0%, rgb(0, 19, 73) 100%);
+  top: 0;
+  padding: 5px;
+  border-radius: 10px;
+  left: -350%;
+  width: 300%;
+  height: 90%;
+  -webkit-animation: link-footer;
+          animation: link-footer;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 /* 
@@ -372,7 +427,6 @@ main section {
 }
 main section div h1 {
   text-align: center;
-  margin: 1rem auto;
   font-size: 2rem;
 }
 main section div h2 {
@@ -405,12 +459,14 @@ main .container-clases .card {
 }
 main .container-clases .card h3 {
   font-size: 1.5rem;
+  text-align: center;
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%);
   z-index: 1;
   color: white;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+  margin: 0;
 }
 main .container-clases .card img {
   filter: grayscale(2);
@@ -536,18 +592,3 @@ section .horarios h3 {
         </div>
       </section>
     </main> */
-.logo {
-  color: #001449;
-  font-weight: bold;
-}
-.logo :nth-child(2) {
-  color: #6bc2ff;
-}
-.logo:hover span {
-  color: #fff;
-  text-shadow: 0px 0px 20px #000000, 0px 0px 40px #000000, 0px 0px 60px #000000;
-  margin: 5px;
-}
-.logo span {
-  transition: all 0.8s ease;
-}
