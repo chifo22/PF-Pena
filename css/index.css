@@ -18,7 +18,7 @@ ul {
   list-style: none;
 }
 
-section .horarios img, section .card-container .card2 img, main .container-clases .card img, main section .hero img {
+section .horarios img, section .card-container .card2 img, main .container-clases .card img, .main-hero section .hero img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -31,7 +31,7 @@ section .horarios img, section .card-container .card2 img, main .container-clase
     height: 0;
   }
   100% {
-    width: 300%;
+    width: 100%;
     height: 2px;
   }
 }
@@ -42,7 +42,7 @@ section .horarios img, section .card-container .card2 img, main .container-clase
     height: 0;
   }
   100% {
-    width: 300%;
+    width: 100%;
     height: 2px;
   }
 }
@@ -225,27 +225,28 @@ header section .nav {
       </nav>
     </header>
   </section> */
-main {
+.main-hero {
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin: 0;
 }
-main section {
+.main-hero section {
   width: 100%;
   height: 100vh;
 }
-main section .hero {
+.main-hero section .hero {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-main section .hero img {
+.main-hero section .hero img {
   filter: blur(5px);
   transition: all 0.3s linear;
 }
-main section .hero img:hover {
+.main-hero section .hero img:hover {
   filter: blur(0);
 }
-main section .hero h1 {
+.main-hero section .hero h1 {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -254,10 +255,10 @@ main section .hero h1 {
   text-shadow: 1px 1px 20px #fff;
   font-size: 2rem;
 }
-main section .hero h1:hover {
+.main-hero section .hero h1:hover {
   text-shadow: 0px 0px 20px #fff, 0px 0px 40px #fff, 0px 0px 80px #fff;
 }
-main section .hero a {
+.main-hero section .hero a {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -268,7 +269,7 @@ main section .hero a {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.76);
 }
-main section .hero a:hover {
+.main-hero section .hero a:hover {
   text-shadow: 0px 0px 20px #17f9ff, 0px 0px 40px #17f9ff, 0px 0px 60px #17f9ff;
   border: 1px solid #17f9ff;
 }
