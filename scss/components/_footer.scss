@@ -1,139 +1,125 @@
 footer {
   width: 100%;
   height: auto;
-  @include flex(flex, row, space-around, center, nowrap);
-  padding: 0;
-  background: linear-gradient(to left, rgb(0, 108, 112) 0%, rgb(0, 19, 73, .8) 100%);
 
 
+  section {
+    @include flex(flex, row, space-around, center, nowrap);
+    padding: 0;
+    background: linear-gradient(to left, rgb(0, 108, 112) 0%, rgba(0, 19, 73, .8) 100%);
 
-  .copyright {
-    display: flex;
-    padding: .5rem;
-    color: #fff;
+    .copyright {
+      display: flex;
+      padding: .5rem;
+      color: #fff;
 
-    .logo {
-      color: $color1;
-      font-weight: bold;
+      .logo {
+        color: $color1;
+        font-weight: bold;
 
-      :nth-child(2) {
-        color: #6bc2ff;
-      }
+        :nth-child(2) {
+          color: #6bc2ff;
+        }
 
-      &:hover span {
-        color: #fff;
-        text-shadow: 0px 0px 20px #000000,
-          -15px -15px 40px #000000,
-          -15px -15px 60px #000000;
-        margin: 3px;
-      }
+        &:hover span {
+          color: #fff;
+          text-shadow: 0px 0px 20px #000000,
+            -15px -15px 40px #000000,
+            -15px -15px 60px #000000;
+          margin: 3px;
+        }
 
-      span {
-        transition: all .8s ease;
+        span {
+          transition: all .8s ease;
+        }
       }
     }
-  }
 
-  .redes {
-    padding: .5rem;
+    .redes {
+      padding: .5rem;
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
 
-      li {
-        position: relative;
-        transition: all 5s ease;
+        li {
+          position: relative;
+          transition: all 5s ease;
 
-        a {
-          padding: 5px;
-          transition: all 5s ease
-        }
+          a {
+            padding: 5px;
+            transition: all 5s ease
+          }
 
-        :hover {
-          animation-name: rotate;
-          animation-duration: 1s;
-        }
+          :hover {
+            animation-name: rotate;
+            animation-duration: 1s;
+          }
 
-        &:hover:nth-child(1):before {
-          content: "Facebook";
-          position: absolute;
-          color: #fff;
-          background: linear-gradient(rgba(23, 124, 255, 0.8) 0%, rgb(0, 19, 73) 100%);
-          top: 0;
-          padding: 5px;
-          border-radius: 10px;
-          left: -350%;
-          width: 300%;
-          height: 90%;
-          animation: link-footer;
-          animation-duration: .5s;
-        }
+          &:hover:nth-child(1):before {
+            content: "Facebook";
+            position: absolute;
+            color: #fff;
+            background: linear-gradient(rgba(23, 124, 255, 0.3) 0%, rgba(0, 19, 73, .3) 100%);
+            top: 0;
+            padding: 5px;
+            border-radius: 10px;
+            left: -350%;
+            width: 300%;
+            height: 90%;
+            animation: link-footer;
+            animation-duration: .5s;
+          }
 
-        &:hover:nth-child(2):before {
-          content: "Twiter";
-          position: absolute;
-          color: #fff;
-          background: linear-gradient(rgba(23, 249, 255, .8) 0%, rgb(0, 19, 73) 100%);
-          top: 0;
-          padding: 5px;
-          border-radius: 10px;
-          left: -350%;
-          width: 300%;
-          height: 90%;
-          animation: link-footer;
-          animation-duration: .5s;
-        }
+          &:hover:nth-child(2):before {
+            content: "Twiter";
+            position: absolute;
+            color: #fff;
+            background: linear-gradient(rgba(23, 249, 255, .3) 0%, rgba(0, 19, 73, .3) 100%);
+            top: 0;
+            padding: 5px;
+            border-radius: 10px;
+            left: -350%;
+            width: 300%;
+            height: 90%;
+            animation: link-footer;
+            animation-duration: .5s;
+          }
 
-        &:hover:nth-child(3):before {
-          content: "Instagram";
-          position: absolute;
-          color: #fff;
-          background: linear-gradient(rgba(255, 96, 23, 0.877) 0%, rgb(0, 19, 73) 100%);
-          top: 0;
-          padding: 5px;
-          border-radius: 10px;
-          left: -350%;
-          width: 300%;
-          height: 90%;
-          animation: link-footer;
-          animation-duration: .5s;
-        }
+          &:hover:nth-child(3):before {
+            content: "Instagram";
+            position: absolute;
+            color: #fff;
+            background: linear-gradient(rgba(255, 23, 197, 0.5) 0%, rgba(73, 0, 0, 0.3) 100%);
+            top: 0;
+            padding: 5px;
+            border-radius: 10px;
+            left: -350%;
+            width: 300%;
+            height: 90%;
+            animation: link-footer;
+            animation-duration: .5s;
+          }
 
-        &:hover:nth-child(4):before {
-          content: "Whatsapp";
-          position: absolute;
-          color: #fff;
-          background: linear-gradient(rgba(50, 255, 23, 0.8) 0%, rgb(0, 19, 73) 100%);
-          top: 0;
-          padding: 5px;
-          border-radius: 10px;
-          left: -350%;
-          width: 300%;
-          height: 90%;
-          animation: link-footer;
-          animation-duration: .5s;
+          &:hover:nth-child(4):before {
+            content: "Whatsapp";
+            position: absolute;
+            color: #fff;
+            background: linear-gradient(rgba(50, 255, 23, .3) 0%, rgba(0, 19, 73, .3) 100%);
+            top: 0;
+            padding: 5px;
+            border-radius: 10px;
+            left: -350%;
+            width: 300%;
+            height: 90%;
+            animation: link-footer;
+            animation-duration: .5s;
+          }
+
         }
 
       }
-
     }
   }
 }
-
-
-/* 
-
-      <div class="redes">
-        <ul>
-          <li><a class="facebook" href=""><img src="./assets/facebook.svg" alt="facebook"></a></li>
-          <li><a class="twitter" href="#"><img src="./assets/twitter.svg" alt=""></a></li>
-          <li><a class="instagram" href="#"><img src="./assets/instagram.svg"alt=""></a></li>
-          <li><a class="whatsapp" href="#"><img src="./assets/whatsapp.svg"alt=""></a></li>
-        </ul>
-      </div>
-
-    </footer>
-
-  </section> */
