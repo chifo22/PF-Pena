@@ -260,8 +260,11 @@ footer {
           position: relative;
           transition: all 5s ease; }
           footer section .redes ul li a {
+            height: 2rem;
+            width: 2rem;
             transition: all 5s ease; }
             footer section .redes ul li a img {
+              height: 2rem;
               width: 2rem; }
           footer section .redes ul li :hover {
             animation-name: rotate;
