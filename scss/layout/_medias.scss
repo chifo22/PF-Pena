@@ -1,5 +1,4 @@
 @media only screen and (max-width:768px) {
-
   .main-card-nosotros {
     section {
       background-color: rgba(255, 255, 255, 0.596);
@@ -16,14 +15,12 @@
         position: relative;
         overflow: hidden;
 
-
         &:hover .text-card {
           transition: all .6s linear;
           right: 0;
           top: 0;
 
         }
-
 
         .text-card {
           align-self: center;
@@ -33,19 +30,21 @@
           height: 100%;
           background-color: rgba(128, 128, 128, 0.479);
 
-
-
-
           p {
             font-weight: bold;
-
-
-
           }
         }
-
-
       }
     }
+  }
+
+}
+
+
+@media only screen and(max-width:425px) {
+
+  .nav {
+    justify-content: center;
+
   }
 }
