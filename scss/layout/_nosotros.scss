@@ -46,9 +46,11 @@
         }
 
         p {
-          font-weight: bold;
           padding: 1rem;
+          font-weight: bold;
           width: 100%;
+          font-family: $fuente-parrafo;
+
         }
       }
     }

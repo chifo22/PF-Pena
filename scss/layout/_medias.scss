@@ -1,3 +1,19 @@
+@media only screen and (min-width:1440px) {
+
+  section {
+    .card-container {
+      @include flex(flex, row, center, start, wrap);
+      gap: 3rem;
+
+      .card2 {
+        width: 20rem;
+        height: 30rem;
+
+      }
+    }
+  }
+}
+
 @media only screen and (max-width:768px) {
   .main-card-nosotros {
     section {
@@ -35,14 +51,33 @@
       }
     }
   }
-
 }
 
+
+@media only screen and(min-width:768px) {
+  .main-hero {
+    section {
+      .hero {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and(max-width:425px) {
 
   .nav {
     justify-content: center;
+  }
 
+  .card-nosotros {
+    .text-card {
+      p {
+        font-weight: bold;
+        font-size: .8rem;
+      }
+    }
   }
 }

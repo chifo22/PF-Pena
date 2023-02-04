@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -51,6 +52,14 @@ ul {
   to {
     bottom: 4px; } }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
 header {
   width: 100%;
   height: auto;
@@ -81,7 +90,7 @@ header {
   padding: 0;
   margin: 0; }
   .container-logo .logo {
-    color: #001449;
+    color: rgba(0, 19, 73, 0.964);
     font-weight: bold; }
     .container-logo .logo :nth-child(2) {
       color: #6bc2ff; }
@@ -104,7 +113,7 @@ header {
   .enlaces-nav :nth-child(4) {
     position: relative; }
   .enlaces-nav :hover:nth-child(1)::after {
-    color: #00b4fc;
+    color: rgba(0, 181, 252, 0.978);
     content: "";
     position: absolute;
     left: 0;
@@ -115,7 +124,7 @@ header {
     animation-name: underline;
     animation-duration: .5s; }
   .enlaces-nav :hover:nth-child(2)::after {
-    color: #00b4fc;
+    color: rgba(0, 181, 252, 0.978);
     content: "";
     position: absolute;
     left: 0;
@@ -126,7 +135,7 @@ header {
     animation-name: underline;
     animation-duration: .5s; }
   .enlaces-nav :hover:nth-child(3)::after {
-    color: #00b4fc;
+    color: rgba(0, 181, 252, 0.978);
     content: "";
     position: absolute;
     left: 0;
@@ -137,7 +146,7 @@ header {
     animation-name: underline;
     animation-duration: .5s; }
   .enlaces-nav :hover:nth-child(4)::after {
-    color: #00b4fc;
+    color: rgba(0, 181, 252, 0.978);
     content: "";
     position: absolute;
     left: 0;
@@ -179,20 +188,23 @@ header {
     overflow: hidden; }
     .main-hero section .hero {
       width: 100%;
+      max-width: 1400px;
+      margin: auto;
       height: 100vh;
       position: relative; }
       .main-hero section .hero img {
-        filter: blur(5px);
+        filter: blur(0px);
         transition: all .3s linear; }
         .main-hero section .hero img:hover {
-          filter: blur(0); }
+          filter: blur(5px); }
       .main-hero section .hero h1 {
         position: absolute;
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         height: auto;
-        font-size: 2rem; }
+        font-size: 2rem;
+        text-transform: uppercase; }
     .main-hero section a {
       position: absolute;
       top: 50%;
@@ -205,8 +217,8 @@ header {
       background-color: rgba(0, 0, 0, 0.76);
       overflow: hidden; }
       .main-hero section a:hover {
-        text-shadow: 0px 0px 20px #17f9ff, 0px 0px 40px #17f9ff, 0px 0px 60px #17f9ff;
-        border: 1px solid #17f9ff; }
+        text-shadow: 0px 0px 20px rgba(23, 247, 255, 0.948), 0px 0px 40px rgba(23, 247, 255, 0.948), 0px 0px 60px rgba(23, 247, 255, 0.948);
+        border: 1px solid rgba(23, 247, 255, 0.948); }
       .main-hero section a::after {
         content: "";
         position: absolute;
@@ -221,15 +233,6 @@ header {
       .main-hero section a:hover::after {
         top: -300%; }
 
-/* <main>
-    <section>
-      <div class="hero">
-        <img src="./assets/hero.jpg" alt="gimnasio">
-        <h1>Que estas esperando?</h1>
-        <a href="./sass/pages/clases.html">Ver mas</a>
-      </div>
-    </section>
-  </main> */
 footer {
   width: 100%;
   height: auto; }
@@ -248,7 +251,7 @@ footer {
       padding: .5rem;
       color: #fff; }
       footer section .copyright .logo {
-        color: #001449;
+        color: rgba(0, 19, 73, 0.964);
         font-weight: bold; }
         footer section .copyright .logo :nth-child(2) {
           color: #6bc2ff; }
@@ -322,7 +325,10 @@ main .botón-flotante {
   animation-iteration-count: infinite; }
   main .botón-flotante a {
     border-radius: 50%;
-    position: relative; }
+    position: relative;
+    height: 40px;
+    width: 40px;
+    display: flex; }
     main .botón-flotante a img {
       width: 100%;
       height: 100%;
@@ -337,10 +343,10 @@ main .botón-flotante {
       bottom: -100px;
       background: rgba(0, 108, 112, 0.488); }
     main .botón-flotante a:hover::after {
-      bottom: 4px;
+      bottom: 0px;
       left: 0;
       animation-name: deAbajo;
-      animation-duration: 1.5s; }
+      animation-duration: .5s; }
 
 main {
   width: 100%;
@@ -359,7 +365,6 @@ main {
     text-align: center;
     width: 100%;
     height: 100%;
-    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -367,7 +372,6 @@ main {
     flex-wrap: wrap;
     padding: 1rem;
     margin: auto;
-    padding: 0;
     gap: .8rem; }
     main .container-clases .card {
       position: relative;
@@ -375,7 +379,7 @@ main {
       height: 30rem;
       border-radius: 10px;
       transition: all .6s ease;
-      box-shadow: 0px 0px 10px 5px #b9b9b9;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.815);
       margin: 20px;
       overflow: hidden; }
       main .container-clases .card h3 {
@@ -397,12 +401,13 @@ main {
         transform: translate(-50%);
         z-index: 1;
         width: 100%;
+        font-family: "Poppins", sans-serif;
         color: #ffffff;
         transition: all .6s ease;
         padding: .5rem; }
       main .container-clases .card:hover p {
         background-color: rgba(0, 0, 0, 0.479);
-        bottom: 10%; }
+        bottom: 0%; }
 
 section {
   width: 100%;
@@ -493,9 +498,10 @@ section {
           font-weight: bold;
           font-size: 2rem; }
         .main-card-nosotros section .card-nosotros .text-card p {
-          font-weight: bold;
           padding: 1rem;
-          width: 100%; }
+          font-weight: bold;
+          width: 100%;
+          font-family: "Poppins", sans-serif; }
 
 main {
   width: 100%;
@@ -507,7 +513,9 @@ main {
     margin: auto;
     box-shadow: 0px 0px 20px black;
     padding: 1rem;
-    background-color: rgba(128, 128, 128, 0.314); }
+    background: linear-gradient(-245deg, rgba(23, 247, 255, 0.3) 0%, rgba(0, 19, 73, 0.9) 100%);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite; }
     main .container-form h1 {
       text-align: center;
       margin: 1rem;
@@ -550,8 +558,7 @@ main {
           position: relative;
           overflow: hidden; }
           main .container-form .formulario .botones .boton:hover {
-            text-shadow: 0px 0px 20px #17f9ff, 0px 0px 40px #17f9ff, 0px 0px 60px #17f9ff;
-            border: 1px solid #17f9ff; }
+            text-shadow: 0px 0px 20px rgba(23, 247, 255, 0.948), 0px 0px 40px rgba(23, 247, 255, 0.948), 0px 0px 60px rgba(23, 247, 255, 0.948); }
           main .container-form .formulario .botones .boton::after {
             content: "";
             position: absolute;
@@ -574,10 +581,8 @@ main {
       flex-wrap: wrap;
       padding: 1rem;
       margin: auto;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.349);
       border-radius: 5px;
-      padding: 0; }
+      gap: 1rem; }
       main .container-form .form-mapa-contacto .mapa {
         width: 100%;
         height: 15rem;
@@ -589,6 +594,20 @@ main {
         width: 100%;
         gap: 1rem;
         padding: .5rem; }
+
+@media only screen and (min-width: 1440px) {
+  section .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: auto;
+    gap: 3rem; }
+    section .card-container .card2 {
+      width: 20rem;
+      height: 30rem; } }
 
 @media only screen and (max-width: 768px) {
   .main-card-nosotros section {
@@ -617,6 +636,13 @@ main {
         background-color: rgba(128, 128, 128, 0.295);
         backdrop-filter: blur(20px); } }
 
+@media only screen and (min-width: 768px) {
+  .main-hero section .hero h1 {
+    font-size: 3rem; } }
+
 @media only screen and (max-width: 425px) {
   .nav {
-    justify-content: center; } }
+    justify-content: center; }
+  .card-nosotros .text-card p {
+    font-weight: bold;
+    font-size: .8rem; } }

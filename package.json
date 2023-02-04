@@ -5,7 +5,7 @@
   "scripts": {
     "build-css": "node-sass --include-path scss scss/layout/index.scss css/index.css -w"
   },
-  "author": "",
+  "author": "Federico Pena",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^8.0.0"
@@ -22,5 +22,5 @@
     "url": "https://github.com/chifo22/Scss/issues"
   },
   "homepage": "https://github.com/chifo22/Scss#readme",
-  "description": ""
+  "description": "Pagina de gimnasio creada usando Sass"
 }

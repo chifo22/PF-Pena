@@ -12,17 +12,19 @@
 
     .hero {
       width: 100%;
+      max-width: 1400px;
+      margin: auto;
       height: 100vh;
       position: relative;
 
 
       img {
         @extend %imagen;
-        filter: blur(5px);
+        filter: blur(0px);
         transition: all .3s linear;
 
         &:hover {
-          filter: blur(0);
+          filter: blur(5px);
         }
       }
 
@@ -34,6 +36,7 @@
         transform: translate(-50%, -50%);
         height: auto;
         font-size: 2rem;
+        text-transform: uppercase;
 
       }
     }
@@ -82,16 +85,3 @@
     }
   }
 }
-
-
-
-
-/* <main>
-    <section>
-      <div class="hero">
-        <img src="./assets/hero.jpg" alt="gimnasio">
-        <h1>Que estas esperando?</h1>
-        <a href="./sass/pages/clases.html">Ver mas</a>
-      </div>
-    </section>
-  </main> */

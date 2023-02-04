@@ -16,6 +16,9 @@ main {
     a {
       border-radius: 50%;
       position: relative;
+      height: 40px;
+      width: 40px;
+      display: flex;
 
       img {
         width: 100%;
@@ -37,10 +40,10 @@ main {
       }
 
       &:hover::after {
-        bottom: 4px;
+        bottom: 0px;
         left: 0;
         animation-name: deAbajo;
-        animation-duration: 1.5s;
+        animation-duration: .5s;
 
       }
     }

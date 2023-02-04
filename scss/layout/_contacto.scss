@@ -12,7 +12,9 @@ main {
     margin: auto;
     box-shadow: 0px 0px 20px black;
     padding: 1rem;
-    background-color: rgba(128, 128, 128, 0.314);
+    background: linear-gradient(-245deg, rgba($color5, .3) 0%, rgba($color1, .9) 100%);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
 
 
     h1 {
@@ -69,7 +71,6 @@ main {
             text-shadow: 0px 0px 20px $color5,
               0px 0px 40px $color5,
               0px 0px 60px $color5;
-            border: 1px solid $color5;
           }
 
           &::after {
@@ -101,10 +102,8 @@ main {
     .form-mapa-contacto {
       width: 80%;
       @include flex(flex, row, center, center, wrap);
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.349);
       border-radius: 5px;
-      padding: 0;
+      gap: 1rem;
 
       .mapa {
         width: 100%;
