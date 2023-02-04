@@ -55,12 +55,7 @@ main {
 
       img {
         @extend %imagen;
-        filter: grayscale(2);
         border-radius: 10px;
-      }
-
-      &:hover img {
-        filter: grayscale(0);
       }
 
       p {
@@ -71,7 +66,6 @@ main {
         z-index: 1;
         width: 100%;
         color: #ffffff;
-
         transition: all .6s ease;
         padding: .5rem;
       }
@@ -118,27 +112,18 @@ section {
       overflow: hidden;
 
       &:hover img {
-        filter: blur(0px) grayscale(0);
+        filter: grayscale(0);
       }
 
       &:hover .logos {
-        bottom: 10%;
-        left: 50%;
+        transform: rotateY(0deg);
       }
-
-
-
-
-
-
-
 
       img {
         border-radius: 10px;
         @extend %imagen;
-        filter: blur(2px) grayscale(10);
+        filter: grayscale(100);
         transition: all .6s ease;
-
 
       }
 
@@ -153,11 +138,12 @@ section {
       .logos {
         position: absolute;
         width: 100%;
-        object-fit: contain;
-        background-color: #0000006b;
-        bottom: -100%;
-        left: 50%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.42);
+        bottom: 10%;
+        left: 0%;
         transform: translate(-50%);
+        transform: rotateY(-90deg);
         height: min-content;
       }
     }
@@ -178,36 +164,3 @@ section {
     }
   }
 }
-
-
-
-
-/* <main>
-      <section>
-        <div class="container-clases">
-          <h1>ACTIVIDADES</h1>
-          <h2>Las dividimos en tres grupos</h2>
-          <div class="card">
-            <img src="../assets/clases/fuerza.jpg" alt="fuerza" />
-            <h3>Fuerza</h3>
-            <p>
-              
-            </p>
-          </div>
-          <div class="card">
-            <img src="../assets/clases/cardio.jpg" alt="cardio" />
-            <h3>Cardio</h3>
-            <p>
-              
-            </p>
-          </div>
-          <div class="card">
-            <img src="../assets/clases/conexion.jpg" alt="conexion" />
-            <h3>Conexion</h3>
-            <p>
-              
-            </p>
-          </div>
-        </div>
-      </section>
-    </main> */
