@@ -13,20 +13,16 @@
   section {
     width: 100%;
     height: 100%;
-
-
-
-
+    max-width: 1400px;
+    margin: auto;
 
     .card-nosotros {
       display: grid;
       grid-auto-rows: auto;
       grid-template-columns: 1fr 1fr;
 
-
       img {
         @extend %imagen;
-
       }
 
       .text-card {
@@ -35,10 +31,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: rgba(128, 128, 128, 0.447);
-
-
-
+        background-color: rgba(94, 94, 94, 0.349);
+        text-shadow: 1px 1px 1px rgb(94, 94, 94);
 
         h2 {
           font-weight: bold;
@@ -47,10 +41,8 @@
 
         p {
           padding: 1rem;
-          font-weight: bold;
           width: 100%;
           font-family: $fuente-parrafo;
-
         }
       }
     }

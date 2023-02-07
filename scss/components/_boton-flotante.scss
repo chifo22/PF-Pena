@@ -8,10 +8,6 @@ main {
     z-index: 1;
     border-radius: 50%;
     overflow: hidden;
-    transition: all .6s ease-in-out;
-    animation-name: border;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
 
     a {
       border-radius: 50%;
@@ -25,26 +21,23 @@ main {
         height: 100%;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.5);
-
       }
 
       &::after {
-        transition: all 5s ease;
         position: absolute;
         content: "";
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 5rem;
+        height: 5rem;
         bottom: -100px;
-        background: rgba(0, 108, 112, 0.488);
-
+        background: rgba(107, 193, 255, 0.438);
+        transition: all 0.5s linear;
       }
 
       &:hover::after {
-        bottom: 0px;
+        bottom: 0;
         left: 0;
         animation-name: deAbajo;
-        animation-duration: .5s;
-
+        animation-duration: 2s;
       }
     }
   }
