@@ -1,10 +1,12 @@
+
+
 footer {
   width: 100%;
   height: auto;
 
 
   section {
-    @include flex(flex, row, space-around, center, nowrap);
+    @include flex(flex, column-reverse, space-around, center, nowrap);
     padding: 0;
     background: linear-gradient(to left, rgb(0, 108, 112) 0%, rgba(0, 19, 73, .8) 100%);
 
@@ -12,6 +14,7 @@ footer {
       display: flex;
       padding: .5rem;
       color: #fff;
+      text-align: center;
 
       .logo {
         color: $color1;
@@ -36,12 +39,18 @@ footer {
     }
 
     .redes {
-      padding: .5rem;
-
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1rem;
       ul {
         display: flex;
-        flex-direction: column;
-        gap: .5rem;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        gap: 2rem;
 
         li {
           width: 2rem;

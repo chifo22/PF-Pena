@@ -30,7 +30,13 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
+    <!--  link bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!--  link css -->
     <link rel="stylesheet" href="../css/index.css" />
     <title>FitnessClub -- Nosotros</title>
@@ -40,19 +46,50 @@
 
     <header>
       <section>
-        <nav class="nav">
-          <div class="container-logo">
-            <a href="../index.html" class="logo">
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <a href="../index.html" class="logo navbar-brand">
               <span>Fitness</span>
               <span href="../index.html">Club</span>
             </a>
-          </div>
-
-          <div class="enlaces-nav">
-            <a href="../index.html">Inicio</a>
-            <a href="./clases.html">Clases</a>
-            <a href="./nosotros.html">Nosotros</a>
-            <a href="./contacto.html">Contacto</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  /></svg
+              ></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav enlaces-nav gap-3">
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./clases.html" class="nav-link">Clases</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./nosotros.html" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./contacto.html " class="nav-link">Contacto</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </section>
@@ -60,13 +97,6 @@
 
     <!-- main -->
     <main class="main-card-nosotros">
-      <!--  boton para volver arriba -->
-      <div class="botón-flotante">
-        <a href="./nosotros.html"
-          ><img src="../assets/arrow-up.png" alt="flecha para volver arriba"
-        /></a>
-      </div>
-
       <!-- comienzan las cards -->
       <h1>Un poco sobre nosotros</h1>
       <section>
@@ -168,27 +198,33 @@
           <ul>
             <li>
               <a href="https://www.facebook.com/"
-                ><img src="../assets/facebook.png" alt="Contacto de facebook"
+                ><img src="../assets/facebook.png" alt="Contacto de facebook" title="Facebook"
               /></a>
             </li>
             <li>
               <a href="https://twitter.com/"
-                ><img src="../assets/twitter.png" alt="Contacto de twitter"
+                ><img src="../assets/twitter.png" alt="Contacto de twitter" title="Twitter"
               /></a>
             </li>
             <li>
               <a href="https://www.instagram.com/"
-                ><img src="../assets/instagram.png" alt="Contacto de instagram"
+                ><img src="../assets/instagram.png" alt="Contacto de instagram" title="Instagram"
               /></a>
             </li>
             <li>
               <a href="https://web.whatsapp.com/"
-                ><img src="../assets/whatsapp.png" alt="Contacto de WhatsApp"
+                ><img src="../assets/whatsapp.png" alt="Contacto de WhatsApp" title="WhatsApp"
               /></a>
             </li>
           </ul>
         </div>
       </section>
     </footer>
+    <!-- script bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

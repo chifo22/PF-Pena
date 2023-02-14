@@ -14,7 +14,13 @@
     <meta name="keywords" content="GIMNASIO, EJERCICIO, VIDA SALUDABLE" />
     <link rel="manifest" href="./package.json" />
 
-    <!--  link fuentes -->
+    <!--  link bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!-- link fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,44 +43,82 @@
 
   <body>
     <!--  nav -->
-    <header id="header-index">
+    <header>
       <section>
-        <nav class="nav">
-          <div class="container-logo">
-            <a href="./index.html" class="logo">
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <a href="./index.html" class="logo navbar-brand logo">
               <span>Fitness</span>
               <span href="./index.html">Club</span>
             </a>
-          </div>
-
-          <div class="enlaces-nav">
-            <a href="./index.html">Inicio</a>
-            <a href="./pages/clases.html">Clases</a>
-            <a href="./pages/nosotros.html">Nosotros</a>
-            <a href="./pages/contacto.html">Contacto</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav enlaces-nav gap-3">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/clases.html" class="nav-link">Clases</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/nosotros.html" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/contacto.html " class="nav-link">Contacto</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </section>
     </header>
 
-    <main class="main-hero">
-      <!--  boton para volver arriba -->
-      <div class="botón-flotante">
-        <a href="#header-index"
-          ><img src="./assets/arrow-up.png" alt="flecha para volver arriba"
-        /></a>
-      </div>
-      <!-- imagen con boton hero -->
-      <section>
-        <div class="hero">
-          <img src="./assets/hero.jpg" alt="Imagen de inicio al gimnasio" />
-          <h1>Que estas esperando?</h1>
-          <a href="./pages/clases.html">Ver mas</a>
+    <main class="main-index">
+      <!-- Carrusel bootstrap -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1>Que estas esperando?</h1>
+            <a href="./pages/clases.html">Ver mas</a>
+            <img src="./assets/clases/fuerza.webp" alt="fuerza">
+          </div>
+          <div class="carousel-item">
+            <h1>Que estas esperando?</h1>
+            <a href="./pages/clases.html">Ver mas</a>
+            <img src="./assets/clases/cardio.webp"  alt="cardio">
+          </div>
+          <div class="carousel-item">
+            <h1>Que estas esperando?</h1>
+            <a href="./pages/clases.html">Ver mas</a>
+            <img src="./assets/clases/conexion.webp" alt="conexión">
+          </div>
         </div>
-      </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
 
     <!-- footer -->
+
+    
     <footer>
       <section>
         <div class="copyright">
@@ -88,29 +132,36 @@
 
         <div class="redes">
           <ul>
-            <li>
+            <li >
               <a href="https://www.facebook.com/"
-                ><img src="./assets/facebook.png" alt="facebook" />
+                ><img src="./assets/facebook.png" alt="facebook" title="Facebook" />
               </a>
             </li>
             <li>
-              <a  href="https://twitter.com/">
-                <img src="./assets/twitter.png" alt="Contacto de twitter" />
+              <a href="https://twitter.com/">
+                <img src="./assets/twitter.png" alt="Contacto de twitter" title="Twitter" />
               </a>
             </li>
             <li>
-              <a  href="https://www.instagram.com/"
-                ><img src="./assets/instagram.png" alt="Contacto de instagram"
+              <a href="https://www.instagram.com/"
+                ><img src="./assets/instagram.png" alt="Contacto de instagram" title="Instagram"
               /></a>
             </li>
             <li>
               <a href="https://web.whatsapp.com/"
-                ><img src="./assets/whatsapp.png" alt="Contacto de WhatsApp"
+                ><img src="./assets/whatsapp.png" alt="Contacto de WhatsApp" title="WhatsApp"
               /></a>
             </li>
           </ul>
         </div>
       </section>
     </footer>
+
+    <!-- script bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

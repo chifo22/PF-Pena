@@ -1,5 +1,5 @@
 .main-card-nosotros {
-  margin: 0;
+  margin-top: 3.5rem;
   width: 100%;
   height: 100%;
 
@@ -20,19 +20,22 @@
       display: grid;
       grid-auto-rows: auto;
       grid-template-columns: 1fr 1fr;
-
+      margin: 0;
       img {
         @extend %imagen;
       }
 
       .text-card {
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: rgba(94, 94, 94, 0.349);
-        text-shadow: 1px 1px 1px rgb(94, 94, 94);
+        background-color: rgba(2, 2, 2, 0.349);
+        text-shadow: 1px 1px 1px rgb(94, 94, 94),
+        1px 1px 1px rgb(94, 94, 94),
+        1px 1px 1px rgb(94, 94, 94);
 
         h2 {
           font-weight: bold;

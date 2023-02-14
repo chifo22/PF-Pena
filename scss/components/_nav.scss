@@ -1,71 +1,57 @@
 header {
+  position: fixed;
+  top: 0;
+  margin: 0;
   width: 100%;
   height: auto;
-  background: linear-gradient(to left, rgba(0, 108, 112, 0.9) 0%, rgba(0, 19, 73, .6) 100%);
+  z-index: 1;
+  background: linear-gradient(
+    to left,
+    rgba(0, 108, 112, 0.9) 0%,
+    rgba(0, 58, 218, 0.712) 100%
+  );
 
   section {
     width: 100%;
     height: 100%;
+    z-index: 1;
+    .logo {
+      color: $color1;
+      font-weight: bold;
 
-    .nav {
-      width: 100%;
-      height: 100%;
-      @include flex(flex, row, space-around, center, wrap);
-      gap: 1rem
+      :nth-child(2) {
+        color: #6bc2ff;
+      }
+
+      &:hover span {
+        color: #fff;
+        text-shadow: 0px 0px 20px #000000, 0px 0px 40px #000000,
+          0px 0px 60px #000000;
+        margin: 5px;
+      }
+
+      span {
+        transition: all 0.8s ease;
+      }
     }
   }
 }
-
-.container-logo {
-  @include flex(flex, row, center, center, nowrap);
-  padding: 0;
-  margin: 0;
-
-
-  .logo {
-    color: $color1;
-    font-weight: bold;
-
-    :nth-child(2) {
-      color: #6bc2ff;
-    }
-
-    &:hover span {
-      color: #fff;
-      text-shadow: 0px 0px 20px #000000,
-        0px 0px 40px #000000,
-        0px 0px 60px #000000;
-      margin: 5px;
-    }
-
-    span {
-      transition: all .8s ease;
-    }
-  }
-}
-
 .enlaces-nav {
-  display: flex;
-  gap: 1rem;
-
+  transition: all 0.8s ease;
 
   :nth-child(1) {
-
     position: relative;
   }
 
   :nth-child(2) {
-
     position: relative;
   }
 
   :nth-child(3) {
-
     position: relative;
   }
 
   :nth-child(4) {
-
     position: relative;
   }
 
@@ -79,7 +65,7 @@ header {
     height: 2px;
     background-color: #6bc2ff;
     animation-name: underline;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
   }
 
   :hover:nth-child(2)::after {
@@ -92,7 +78,7 @@ header {
     height: 2px;
     background-color: #6bc2ff;
     animation-name: underline;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
   }
 
   :hover:nth-child(3)::after {
@@ -105,7 +91,7 @@ header {
     height: 2px;
     background-color: #6bc2ff;
     animation-name: underline;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
   }
 
   :hover:nth-child(4)::after {
@@ -118,11 +104,17 @@ header {
     height: 2px;
     background-color: #6bc2ff;
     animation-name: underline;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
   }
 
-  a {
-    transition: all .3s ease;
-    color: #fff;
+  li {
+    a {
+      transition: all 0.3s ease;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgb(0, 0, 0);
+      &:hover {
+        color: $color4;
+      }
+    }
   }
 }
