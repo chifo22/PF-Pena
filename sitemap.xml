@@ -1,37 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>https://entregafinal-pena-iota.vercel.app</loc>
+<lastmod>2023-02-14</lastmod>
+</url>
+<url>
+<loc>https://entregafinal-pena-iota.vercel.app/pages/nosotros.html</loc>
+<lastmod>2023-02-14</lastmod>
+<image:image>
+<image:loc>https://entregafinal-pena-iota.vercel.app/assets/clases/entrenadores.jpg</image:loc>
+<!-- ERROR - Object reference not set to an instance of an object. -->
+<url>
+<loc>https://entregafinal-pena-iota.vercel.app/pages/clases.html</loc>
+<lastmod>2023-02-14</lastmod>
+<image:image>
+<image:loc>https://entregafinal-pena-iota.vercel.app/assets/clases/clases-description/cardio/cardio1.jpg</image:loc>
+<!-- ERROR - Object reference not set to an instance of an object. -->
+<url>
+<loc>https://entregafinal-pena-iota.vercel.app/index.html</loc>
+<lastmod>2023-02-14</lastmod>
+</url>
+</image:image>
 
-
-<url>
-  <loc>https://sass-iota.vercel.app/</loc>
-  <lastmod>2023-02-03T04:12:12+00:00</lastmod>
-  <priority>1.00</priority>
 </url>
-<url>
-  <loc>https://sass-iota.vercel.app/index.html</loc>
-  <lastmod>2023-02-03T04:12:12+00:00</lastmod>
-  <priority>0.80</priority>
+</image:image>
 </url>
-<url>
-  <loc>https://sass-iota.vercel.app/pages/clases.html</loc>
-  <lastmod>2023-02-03T04:12:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://sass-iota.vercel.app/pages/nosotros.html</loc>
-  <lastmod>2023-02-03T04:12:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://sass-iota.vercel.app/pages/contacto.html</loc>
-  <lastmod>2023-02-03T04:12:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
 </urlset>
