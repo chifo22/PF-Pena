@@ -1,14 +1,9 @@
 @mixin flex($display, $direction, $justify-content, $align-items, $wrap) {
   display: $display;
-  flex-direction: $direction ;
+  flex-direction: $direction;
   justify-content: $justify-content;
   align-items: $align-items;
   flex-wrap: $wrap;
   padding: 1rem;
   margin: auto;
-}
-
-@mixin rgba($color, $opacidad) {
-  background: rgba($color: $color, $alpha: $opacidad);
-
 }

@@ -43,9 +43,8 @@
           height: 100%;
           background-color: rgba(128, 128, 128, 0.527);
           backdrop-filter: blur(20px);
-          text-shadow: 1px 1px 1px rgb(0, 0, 0),
-          1px 1px 1px rgb(0, 0, 0),
-          1px 1px 1px rgb(0, 0, 0);
+          text-shadow: 1px 1px 1px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0),
+            1px 1px 1px rgb(0, 0, 0);
           color: rgb(197, 197, 197);
           font-weight: bold;
         }
@@ -81,7 +80,7 @@
     button {
       color: $color1;
     }
-    .nav-item{
+    .nav-item {
       display: flex;
       justify-content: center;
     }
